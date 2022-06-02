@@ -1,0 +1,46 @@
+<% const texts = ['Home','Detail','Shop','Contact'] %>
+<% const feature = [
+{img:'images/camera.png',h1:'Camera',p:'Beautiful Lens.',class:'info_1'},
+{img:'images/processor.png',h1:'Processor',p:'Processor is very important.',class:'info_2'},
+{img:'images/battery.png',h1:'Battery',p:'Battery is affuluent.',class:'info_3'},
+{img:'images/display.png',h1:'Display',p:'Beautiful Display.',class:'info_4'}
+] %>
+<% const text_1 ='Feature' %>
+<body>
+    <div class="main">
+      <nav class='main-nav'>
+        <div class="logo-area">
+          <img src="./images/logo.png" class="logo" />
+          <h2>Electric PC Design</h2>
+        </div>
+
+        <div class="nav-links">
+          <ul class='main-ul'>
+            <% texts.forEach(function(value){ %>
+                <a class='main-text1' href = '#' ><li class='main-li'><%- value %></li></a>
+            <% }); %>
+          </ul>
+        </div>
+      </nav>
+      <div class='information'>
+        <div class="overlay"></div>
+        <img class='img-pc' src='images/pc.png'>
+        <div id = 'circle'>
+           <% feature.forEach(function(value){ %>
+            <div class='feature <%- value.class %>'>
+              <img src= <%- value.img %>>
+              <div class='info-textb'>
+                <h1><%- value.h1 %></h1>
+                <p><%- value.p %></p>
+              </div>
+            </div>
+            <% }); %>
+        </div>
+      </div>
+      <div class='control'>
+        <img src='images/arrow.png' id='upBtn'>
+        <h3><%- text_1 %></h3>
+        <img src='images/arrow.png' id='downBtn'>
+      </div>
+
+      
